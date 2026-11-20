@@ -281,11 +281,24 @@ body {
     font-size: clamp(55px, 8vw, 95px);
     font-weight: 400;
     color: #fff0d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
+.welcome-content h1 .welcome-weds,
 .welcome-content h1 span {
     color: var(--gold);
     font-size: 0.65em;
+    display: inline-block;
+    margin: 0 0.25em;
+}
+
+.welcome-content h1 .couple-name-part {
+    color: #fff0d1;
+    font-size: 1em;
+    margin: 0;
 }
 
 .welcome-message {
@@ -1319,6 +1332,11 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.parentage-text .parentage-rel,
+.parentage-text .parentage-names {
+    display: inline;
+}
+
 .couple-weds {
     display: block;
     font-family: 'Great Vibes', cursive;
@@ -1400,6 +1418,15 @@ body {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 12px;
+}
+
+.detail-box h4 {
+    color: #dfcdbe;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0 0 6px;
+    letter-spacing: 0.5px;
 }
 
 .detail-box p {
@@ -2136,7 +2163,20 @@ body {
     }
 
     .welcome-content h1 {
-        font-size: 58px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 46px;
+        line-height: 1.15;
+    }
+
+    .welcome-content h1 .welcome-weds,
+    .welcome-content h1 span {
+        display: block;
+        font-size: 26px;
+        margin: 2px 0;
+        line-height: 1.1;
     }
 
     .welcome-message {
@@ -2152,11 +2192,11 @@ body {
     }
 
     #open-invitation:checked ~ .welcome-screen .curtain-left {
-        transform: translateX(-78%);
+        transform: translateX(-88%);
     }
 
     #open-invitation:checked ~ .welcome-screen .curtain-right {
-        transform: translateX(78%);
+        transform: translateX(88%);
     }
 
     .wax-stamp {
@@ -2204,6 +2244,27 @@ body {
         letter-spacing: 2px;
     }
 
+    .scratch-date-container {
+        max-width: 100%;
+        padding: 0 4px;
+    }
+
+    .scratch-instruction {
+        font-size: clamp(9px, 2.7vw, 11px);
+        letter-spacing: clamp(1px, 0.4vw, 2px);
+        margin-bottom: 10px;
+        padding: 0 4px;
+        line-height: 1.4;
+        word-break: keep-all;
+        white-space: normal;
+    }
+
+    .date-revealed-banner {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        padding: 6px 12px;
+    }
+
     .countdown-item {
         min-width: 48px;
         padding: 6px 3px;
@@ -2228,9 +2289,19 @@ body {
     }
 
     .parentage-text {
-        font-size: 18px;
+        font-size: 19px;
         letter-spacing: 0.3px;
         margin: 2px auto 8px;
+        line-height: 1.35;
+    }
+
+    .parentage-text .parentage-rel {
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .parentage-text .parentage-names {
+        display: block;
     }
 
     .couple-weds {
